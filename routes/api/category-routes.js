@@ -23,7 +23,7 @@ router.get('/:id', (req, res) => {
     });
 
     if (!categoryData) {
-      res.status(404).json({ message: 'No library card found with that id!' });
+      res.status(404).json({ message: 'No Category found with that id!' });
       return;
     }
     console.log(categoryData)
@@ -52,7 +52,7 @@ router.put('/:id', (req, res) => {
   } catch (err) {
     res.status(400).json(err);
   // update a category by its `id` value
-});
+};
 
 router.delete('/:id', (req, res) => {
   try {
